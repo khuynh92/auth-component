@@ -1,19 +1,23 @@
-[![Build Status](https://travis-ci.com/khuynh92/35-cookies-persistence.svg?branch=master)](https://travis-ci.com/khuynh92/35-cookies-persistence)
+[![Build Status](https://travis-ci.com/khuynh92/auth-component.svg?branch=master)](https://travis-ci.com/khuynh92/auth-component)
 
-heroku: http://khoa-35-cookies-persistence.herokuapp.com  
-PR: https://github.com/khuynh92/35-cookies-persistence/pull/1  
-Travis: https://travis-ci.com/khuynh92/35-cookies-persistence  
+PR: https://github.com/khuynh92/auth-component/pull/1  
+Travis: https://travis-ci.com/khuynh92/auth-component  
 
-# LAB 35-cookies-persistence
-  This lab is the frontend of sluggram (https://github.com/slugbyte/sluggram). It provides a login/signup feature. When logged in, user will be redirected to dashboard page. On sign out, user will be redirected to home page. /dashboard will ONLY be accessible if user is signed in.
+# Auth Component
+  This lab is the frontend of sluggram (https://github.com/khuynh92/18-oauth). It provides a login/signup feature. When logged in, user will be redirected to dashboard page. On sign out, user will be redirected to home page. /dashboard will ONLY be accessible if user is signed in.
+  
+ Depending on the users roles (user, admin, editor), certain information will show on the dashboard page.
 ## Configuration
+
 env variables:
 
 **backend folder**
 ```
 PORT = 3000
-MONGO_URI = 'mongodb://localhost/lab_35'
-SECRET='secretnamehere'
+MONGODB_URI = 'mongodb://localhost/39-auth-component'
+APP_SECRET = 'sssssshhhhhhhhh'
+CLIENT_URL = 'http://localhost:3000/profile'
+API_URL='http://localhost:3000'
 ```
 **frontend root directory**
 ```
@@ -21,10 +25,6 @@ API_URL = http://localhost:3000
 ```
 
 ***make sure your api_url port matches the backend port***
-
-## Heroku start:
-
-simply go to. http://khoa-35-cookies-persistence.herokuapp.com. Ensure the backend directory is working by going to http://khoa-sluggram.herokuapp.com/. if `not found` is shown, the backend server is up and running. 
 
 ## To install
 Download this repo and in the root directory, type in to the CLI `npm i` to install all dependencies.
